@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamos y Quejas - Aldiflix</title>
+    <link rel="stylesheet" href="./scss/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-wrapper {
+            position: relative;
+            background-color: black;
+        }
+
+        .header {
+            background-image: url('https://i.blogs.es/baca2f/fracasos-taquilla-mejores-peliculas/1366_2000.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container form {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .container form input[type="text"],
+        .container form input[type="email"],
+        .container form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .container form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .container form input[type="submit"] {
+            background-color: #ff2f28;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .container form input[type="submit"]:hover {
+            background-color: #d63027;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .footer ul li:last-child {
+            margin-right: 0;
+        }
+
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer ul li a:hover {
+            color: #ff2f28;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-wrapper">
+        <header class="header">
+            <h1>Reclamos y Quejas - Aldiflix</h1>
+        </header>
+    </div>
+
+    <section class="container">
+        <form action="#" method="POST">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="motivo">Motivo del reclamo o queja:</label><br>
+            <textarea id="motivo" name="motivo" rows="4" required></textarea><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <footer class="footer container">
+        <h3>Aldiflix</h3>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="pages/nosotros.html">Nosotros</a></li>
+            <li><a href="pages/servicios.html">Servicios</a></li>
+            <li><a href="pages/peliculas.html">Peliculas</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
